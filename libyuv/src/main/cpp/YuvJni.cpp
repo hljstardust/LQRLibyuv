@@ -3,7 +3,7 @@
 
 extern "C"
 JNIEXPORT void JNICALL
-Java_com_libyuv_util_YuvUtil_yuvCompress(JNIEnv *env, jclass jcls,
+Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvCompress(JNIEnv *env, jclass jcls,
                                          jbyteArray nv21Src, jint width,
                                          jint height, jbyteArray i420Dst,
                                          jint dst_width, jint dst_height,
@@ -85,7 +85,7 @@ Java_com_libyuv_util_YuvUtil_yuvCropI420(JNIEnv *env, jclass jcls, jbyteArray sr
 
 extern "C"
 JNIEXPORT void JNICALL
-Java_com_libyuv_util_YuvUtil_yuvMirrorI420(JNIEnv *env, jclass jcls, jbyteArray i420Src,
+Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvMirrorI420(JNIEnv *env, jclass jcls, jbyteArray i420Src,
                                            jint width, jint height, jbyteArray i420Dst) {
     jbyte *src_i420_data = env->GetByteArrayElements(i420Src, NULL);
     jbyte *dst_i420_data = env->GetByteArrayElements(i420Dst, NULL);
@@ -96,7 +96,7 @@ Java_com_libyuv_util_YuvUtil_yuvMirrorI420(JNIEnv *env, jclass jcls, jbyteArray 
 
 extern "C"
 JNIEXPORT void JNICALL
-Java_com_libyuv_util_YuvUtil_yuvScaleI420(JNIEnv *env, jclass jcls, jbyteArray i420Src,
+Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvScaleI420(JNIEnv *env, jclass jcls, jbyteArray i420Src,
                                           jint width, jint height, jbyteArray i420Dst,
                                           jint dstWidth, jint dstHeight, jint mode) {
     jbyte *src_i420_data = env->GetByteArrayElements(i420Src, NULL);
@@ -108,7 +108,7 @@ Java_com_libyuv_util_YuvUtil_yuvScaleI420(JNIEnv *env, jclass jcls, jbyteArray i
 
 extern "C"
 JNIEXPORT void JNICALL
-Java_com_libyuv_util_YuvUtil_yuvRotateI420(JNIEnv *env, jclass jcls, jbyteArray i420Src,
+Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvRotateI420(JNIEnv *env, jclass jcls, jbyteArray i420Src,
                                            jint width, jint height, jbyteArray i420Dst,
                                            jint degree) {
     jbyte *src_i420_data = env->GetByteArrayElements(i420Src, NULL);
@@ -120,7 +120,7 @@ Java_com_libyuv_util_YuvUtil_yuvRotateI420(JNIEnv *env, jclass jcls, jbyteArray 
 
 extern "C"
 JNIEXPORT void JNICALL
-Java_com_libyuv_util_YuvUtil_yuvNV21ToI420(JNIEnv *env, jclass jcls, jbyteArray nv21Src,
+Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvNV21ToI420(JNIEnv *env, jclass jcls, jbyteArray nv21Src,
                                            jint width, jint height, jbyteArray i420Dst) {
     jbyte *src_nv21_data = env->GetByteArrayElements(nv21Src, NULL);
     jbyte *dst_i420_data = env->GetByteArrayElements(i420Dst, NULL);
@@ -131,7 +131,7 @@ Java_com_libyuv_util_YuvUtil_yuvNV21ToI420(JNIEnv *env, jclass jcls, jbyteArray 
 
 extern "C"
 JNIEXPORT void JNICALL
-Java_com_libyuv_util_YuvUtil_yuvI420ToNV21(JNIEnv *env, jclass jcls, jbyteArray i420Src,
+Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvI420ToNV21(JNIEnv *env, jclass jcls, jbyteArray i420Src,
                                            jint width, jint height, jbyteArray nv21Dst) {
 
     jbyte *src_i420_data = env->GetByteArrayElements(i420Src, NULL);
@@ -142,7 +142,7 @@ Java_com_libyuv_util_YuvUtil_yuvI420ToNV21(JNIEnv *env, jclass jcls, jbyteArray 
 
 extern "C"
 JNIEXPORT void JNICALL
-Java_com_libyuv_util_YuvUtil_yuvNV21ToI420AndRotate(JNIEnv *env, jclass jcls, jbyteArray nv21Src,
+Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvNV21ToI420AndRotate(JNIEnv *env, jclass jcls, jbyteArray nv21Src,
                                                     jint width, jint height, jbyteArray i420Dst,
                                                     jint degree) {
     jbyte *src_nv21_data = env->GetByteArrayElements(nv21Src, NULL);
@@ -165,7 +165,7 @@ Java_com_libyuv_util_YuvUtil_yuvNV21ToI420AndRotate(JNIEnv *env, jclass jcls, jb
 }
 
 extern "C"
-JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvI420ToRGB24
+JNIEXPORT void JNICALL Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvI420ToRGB24
         (JNIEnv *env, jclass jcls, jbyteArray i420Src, jint width, jint height,
          jbyteArray rgb24Dst) {
     jbyte *src_i420_data = env->GetByteArrayElements(i420Src, NULL);
@@ -175,7 +175,7 @@ JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvI420ToRGB24
 }
 
 extern "C"
-JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvI420ToARGB
+JNIEXPORT void JNICALL Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvI420ToARGB
         (JNIEnv *env, jclass jcls, jbyteArray i420Src, jint width, jint height, jint dst_stride,
          jbyteArray argbDst) {
     jbyte *src_i420_data = env->GetByteArrayElements(i420Src, NULL);
@@ -185,7 +185,7 @@ JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvI420ToARGB
 }
 
 extern "C"
-JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvI420ToRGBAMac
+JNIEXPORT void JNICALL Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvI420ToRGBAMac
         (JNIEnv *env, jclass jcls, jbyteArray i420Src, jint width, jint height, jint dst_stride,
          jbyteArray rgbaMacDst) {
     jbyte *src_i420_data = env->GetByteArrayElements(i420Src, NULL);
@@ -195,7 +195,7 @@ JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvI420ToRGBAMac
 }
 
 extern "C"
-JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvI420ToARGB4444
+JNIEXPORT void JNICALL Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvI420ToARGB4444
         (JNIEnv *env, jclass jcls, jbyteArray i420Src, jint width, jint height, jint dst_stride,
          jbyteArray argb4444Dst) {
     jbyte *src_i420_data = env->GetByteArrayElements(i420Src, NULL);
@@ -205,7 +205,7 @@ JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvI420ToARGB4444
 }
 
 extern "C"
-JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvI420ToRGB565
+JNIEXPORT void JNICALL Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvI420ToRGB565
         (JNIEnv *env, jclass jcls, jbyteArray i420Src, jint width, jint height,
          jbyteArray rgb565Dst) {
     jbyte *src_i420_data = env->GetByteArrayElements(i420Src, NULL);
@@ -215,7 +215,7 @@ JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvI420ToRGB565
 }
 
 extern "C"
-JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvI420ToRGB565Android
+JNIEXPORT void JNICALL Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvI420ToRGB565Android
         (JNIEnv *env, jclass jcls, jbyteArray i420Src, jint width, jint height,
          jbyteArray rgb565Dst) {
     jbyte *src_i420_data = env->GetByteArrayElements(i420Src, NULL);
@@ -225,7 +225,7 @@ JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvI420ToRGB565Android
 }
 
 extern "C"
-JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvI420ToARGB1555
+JNIEXPORT void JNICALL Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvI420ToARGB1555
         (JNIEnv *env, jclass jcls, jbyteArray i420Src, jint width, jint height, jint dst_stride,
          jbyteArray argb1555Dst) {
     jbyte *src_i420_data = env->GetByteArrayElements(i420Src, NULL);
@@ -235,7 +235,7 @@ JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvI420ToARGB1555
 }
 
 extern "C"
-JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvI420ToYUY2
+JNIEXPORT void JNICALL Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvI420ToYUY2
         (JNIEnv *env, jclass jcls, jbyteArray i420Src, jint width, jint height, jint dst_stride,
          jbyteArray yuy2Dst) {
     jbyte *src_i420_data = env->GetByteArrayElements(i420Src, NULL);
@@ -245,7 +245,7 @@ JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvI420ToYUY2
 }
 
 extern "C"
-JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvI420ToUYVY
+JNIEXPORT void JNICALL Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvI420ToUYVY
         (JNIEnv *env, jclass jcls, jbyteArray i420Src, jint width, jint height, jint dst_stride,
          jbyteArray uyvyDst) {
     jbyte *src_i420_data = env->GetByteArrayElements(i420Src, NULL);
@@ -255,7 +255,7 @@ JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvI420ToUYVY
 }
 
 extern "C"
-JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvI420ToYV12
+JNIEXPORT void JNICALL Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvI420ToYV12
         (JNIEnv *env, jclass jcls, jbyteArray i420Src, jint width, jint height, jint dst_stride,
          jbyteArray yv12Dst) {
     jbyte *src_i420_data = env->GetByteArrayElements(i420Src, NULL);
@@ -265,7 +265,7 @@ JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvI420ToYV12
 }
 
 extern "C"
-JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvYV12ToI420
+JNIEXPORT void JNICALL Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvYV12ToI420
         (JNIEnv *env, jclass jcls, jbyteArray yv12Src, jint width, jint height,
          jbyteArray i420Dst) {
     jbyte *src_yv12_data = env->GetByteArrayElements(yv12Src, NULL);
@@ -275,7 +275,7 @@ JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvYV12ToI420
 }
 
 extern "C"
-JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvNV12ToI420
+JNIEXPORT void JNICALL Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvNV12ToI420
         (JNIEnv *env, jclass jcls, jbyteArray nv12Src, jint width, jint height,
          jbyteArray i420Dst) {
     jbyte *src_nv12_data = env->GetByteArrayElements(nv12Src, NULL);
@@ -285,7 +285,7 @@ JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvNV12ToI420
 }
 
 extern "C"
-JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvI420ToNv12
+JNIEXPORT void JNICALL Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvI420ToNv12
         (JNIEnv *env, jclass jcls, jbyteArray i420Src, jint width, jint height,
          jbyteArray nv12Dst) {
     jbyte *src_i420_data = env->GetByteArrayElements(i420Src, NULL);
@@ -295,7 +295,7 @@ JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvI420ToNv12
 }
 
 extern "C"
-JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvNV12ToI420AndRotate
+JNIEXPORT void JNICALL Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvNV12ToI420AndRotate
         (JNIEnv *env, jclass jcls, jbyteArray nv12Src, jint width, jint height, jbyteArray i420Dst,
          jint degree) {
     jbyte *src_nv12_data = env->GetByteArrayElements(nv12Src, NULL);
@@ -318,7 +318,7 @@ JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvNV12ToI420AndRotate
 }
 
 extern "C"
-JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvNV12ToRGB565
+JNIEXPORT void JNICALL Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvNV12ToRGB565
         (JNIEnv *env, jclass jcls, jbyteArray nv12Src, jint width, jint height,
          jbyteArray rgb565Dst) {
     jbyte *src_nv12_data = env->GetByteArrayElements(nv12Src, NULL);
@@ -328,7 +328,7 @@ JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvNV12ToRGB565
 }
 
 extern "C"
-JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvI420ToRGBAIPhone
+JNIEXPORT void JNICALL Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvI420ToRGBAIPhone
         (JNIEnv *env, jclass jcls, jbyteArray i420Src, jint width, jint height, jint dst_stride,
          jbyteArray rgbaDst) {
     jbyte *src_i420_data = env->GetByteArrayElements(i420Src, NULL);
@@ -338,7 +338,7 @@ JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvI420ToRGBAIPhone
 }
 
 extern "C"
-JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvI420Copy
+JNIEXPORT void JNICALL Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvI420Copy
         (JNIEnv *env, jclass jcls, jbyteArray i420Src, jint width, jint height, jint dst_stride,
          jbyteArray i420Dst) {
     jbyte *src_i420_data = env->GetByteArrayElements(i420Src, NULL);
@@ -348,7 +348,7 @@ JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvI420Copy
 }
 
 extern "C"
-JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvUYVYToI420
+JNIEXPORT void JNICALL Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvUYVYToI420
         (JNIEnv *env, jclass jcls, jbyteArray uyvySrc, jint width, jint height,
          jbyteArray i420Dst) {
     jbyte *src_uyvy_data = env->GetByteArrayElements(uyvySrc, NULL);
@@ -358,7 +358,7 @@ JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvUYVYToI420
 }
 
 extern "C"
-JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvYUY2ToI420
+JNIEXPORT void JNICALL Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvYUY2ToI420
         (JNIEnv *env, jclass jcls, jbyteArray yuy2Src, jint width, jint height,
          jbyteArray i420Dst) {
     jbyte *src_yuy2_data = env->GetByteArrayElements(yuy2Src, NULL);
@@ -368,7 +368,7 @@ JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvYUY2ToI420
 }
 
 extern "C"
-JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvRGB24ToARGB
+JNIEXPORT void JNICALL Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvRGB24ToARGB
         (JNIEnv *env, jclass jcls, jbyteArray rgb24Src, jint width, jint height, jint dst_stride,
          jbyteArray argbDst) {
     jbyte *src_rgb24_data = env->GetByteArrayElements(rgb24Src, NULL);
@@ -378,7 +378,7 @@ JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvRGB24ToARGB
 }
 
 extern "C"
-JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvRGB24ToI420
+JNIEXPORT void JNICALL Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvRGB24ToI420
         (JNIEnv *env, jclass jcls, jbyteArray rgb24Src, jint width, jint height,
          jbyteArray i420Dst) {
     jbyte *src_rgb24_data = env->GetByteArrayElements(rgb24Src, NULL);
@@ -388,7 +388,7 @@ JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvRGB24ToI420
 }
 
 extern "C"
-JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvI420ToARGBMac
+JNIEXPORT void JNICALL Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvI420ToARGBMac
         (JNIEnv *env, jclass jcls, jbyteArray i420Src, jint width, jint height, jint dst_stride,
          jbyteArray argbMacDst) {
     jbyte *src_i420_data = env->GetByteArrayElements(i420Src, NULL);
@@ -398,7 +398,7 @@ JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvI420ToARGBMac
 }
 
 extern "C"
-JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvARGBMacToI420
+JNIEXPORT void JNICALL Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvARGBMacToI420
         (JNIEnv *env, jclass jcls, jbyteArray argbMacSrc, jint width, jint height,
          jbyteArray i420Dst) {
     jbyte *src_argb_mac_data = env->GetByteArrayElements(argbMacSrc, NULL);
@@ -408,7 +408,7 @@ JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvARGBMacToI420
 }
 
 extern "C"
-JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvMirrorI420LeftRight
+JNIEXPORT void JNICALL Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvMirrorI420LeftRight
         (JNIEnv *env, jclass jcls, jbyteArray i420Src, jint width, jint height,
          jbyteArray i420Dst) {
     jbyte *src_i420_data = env->GetByteArrayElements(i420Src, NULL);
@@ -418,7 +418,7 @@ JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvMirrorI420LeftRight
 }
 
 extern "C"
-JNIEXPORT void JNICALL Java_com_libyuv_util_YuvUtil_yuvMirrorI420UpDown
+JNIEXPORT void JNICALL Java_com_ahsdk_microvideo_libyuv_YuvUtil_yuvMirrorI420UpDown
         (JNIEnv *env, jclass jcls, jbyteArray i420Src, jint width, jint height,
          jbyteArray i420Dst) {
     jbyte *src_i420_data = env->GetByteArrayElements(i420Src, NULL);

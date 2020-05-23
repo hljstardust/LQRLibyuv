@@ -19,7 +19,7 @@ import com.hzl.libyuvdemo.listener.CameraPictureListener;
 import com.hzl.libyuvdemo.listener.CameraYUVDataListener;
 import com.hzl.libyuvdemo.util.CameraUtil;
 import com.hzl.libyuvdemo.util.SPUtil;
-import com.libyuv.util.YuvUtil;
+import com.ahsdk.microvideo.libyuv.YuvUtil;
 
 import java.io.ByteArrayOutputStream;
 
